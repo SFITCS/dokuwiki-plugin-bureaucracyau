@@ -17,15 +17,15 @@ class bureaucracyau_field_date_test extends BureaucracyauTest
             [
                 'Date:@@dateLabel@@',
                 'date "dateLabel"',
-                '2018-05-15',
-                'Date:2018-05-15',
+                '15-05-2018',
+                'Date:15-05-2018',
                 [],
                 'valid date',
             ],
             [
                 'Date:@@dateLabel@@',
                 'date "dateLabel"',
-                '2018.05.15',
+                '15.05.2018',
                 null,
                 ['dateLabel'],
                 'invalid date',
@@ -33,7 +33,7 @@ class bureaucracyau_field_date_test extends BureaucracyauTest
             [
                 'Date: @DATE(@@dateLabel@@)@',
                 'date "dateLabel"',
-                '2018-02-15',
+                '15-02-2018',
                 'Date: 2018/02/15 00:00',
                 [],
                 'formatted date with $conf[\'dformat\'] format',
@@ -41,7 +41,7 @@ class bureaucracyau_field_date_test extends BureaucracyauTest
             [
                 'Month: @DATE(@@dateLabel@@,%%m)@',
                 'date "dateLabel"',
-                '2018-02-15',
+                '15-02-2018',
                 'Month: 02',
                 [],
                 'formatted date with custom format',
