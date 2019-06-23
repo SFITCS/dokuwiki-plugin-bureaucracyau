@@ -1,8 +1,8 @@
 base    bureaucracyau
-author  Andreas Gohr
-email   andi@splitbrain.org
-date    2019-05-30
+author  Scott Ferguson
+email   scott@scottferguson.com.au
+date    2019-06-10
 name    Bureaucracy-AU Plugin
-desc    Create forms and generate pages or emails from them
+desc    Create forms and generate pages or emails from them - forked for AU date support (dd-mm-yyyy)
 url     https://www.dokuwiki.org/plugin:bureaucracyau
 
