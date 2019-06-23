@@ -11,6 +11,15 @@ Please refer to http://www.dokuwiki.org/plugins for additional info
 on how to install plugins in DokuWiki.
 
 ----
+
+Based on the work of Andreas Gohr, modified by Scott Ferguson
+All blame to me. All credit to Andreas.
+
+Testing has been rudimentary, aside from phpunit tests only
+template mode has been tested by me. Feedback appreciated.
+https://github.com/SFITCS/dokuwiki-plugin-bureaucracyau/issues
+
+----
 Copyright (C) Andreas Gohr <andi@splitbrain.org>
 
 This program is free software; you can redistribute it and/or modify
