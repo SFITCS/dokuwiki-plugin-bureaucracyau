@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldpassword
+ * Class helper_plugin_bureaucracyau_fieldpassword
  *
  * Creates a single line password input field
  */
-class helper_plugin_bureaucracy_fieldpassword extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldpassword extends helper_plugin_bureaucracyau_field {
     /**
      * Arguments:
      *  - cmd

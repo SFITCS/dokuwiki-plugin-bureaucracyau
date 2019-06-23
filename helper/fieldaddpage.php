@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldaddpage
+ * Class helper_plugin_bureaucracyau_fieldaddpage
  *
  * Adds another page page_tgt based on a template page page_tpl only for use with the template action
  */
-class helper_plugin_bureaucracy_fieldaddpage extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldaddpage extends helper_plugin_bureaucracyau_field {
 
     /**
      * Arguments:
@@ -39,7 +39,7 @@ class helper_plugin_bureaucracy_fieldaddpage extends helper_plugin_bureaucracy_f
      * Handle a post to the field
      *
      * @param string $value null
-     * @param helper_plugin_bureaucracy_field[] $fields (reference) form fields (POST handled upto $this field)
+     * @param helper_plugin_bureaucracyau_field[] $fields (reference) form fields (POST handled upto $this field)
      * @param int    $index  index number of field in form
      * @param int    $formid unique identifier of the form which contains this field
      * @return bool Whether the passed value is valid

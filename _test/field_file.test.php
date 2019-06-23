@@ -1,11 +1,11 @@
 <?php
 /**
- * @group plugin_bureaucracy
+ * @group plugin_bureaucracyau
  * @group plugins
  */
-class syntax_plugin_bureaucracy_fieldfile_test extends DokuWikiTest {
+class syntax_plugin_bureaucracyau_fieldfile_test extends DokuWikiTest {
 
-    protected $pluginsEnabled = array('bureaucracy');
+    protected $pluginsEnabled = array('bureaucracyau');
 
     /**
      * Parse doku $syntax and check if any resulting xhtml element can be selected by $pqSelector
@@ -52,16 +52,16 @@ class syntax_plugin_bureaucracy_fieldfile_test extends DokuWikiTest {
     }
 
     /**
-     * Parse the bureaucracy form syntax and simulate a file upload
+     * Parse the bureaucracyau form syntax and simulate a file upload
      *
-     * @param $form_syntax bureaucracy form syntax containg only one file field
+     * @param $form_syntax bureaucracyau form syntax containg only one file field
      * @return string a name of the uploaded file
      */
     protected function simulate_file_upload($form_syntax) {
         $media = 'img.png';
         $media_src = mediaFN('wiki:dokuwiki-128.png');
 
-        $syntax_plugin = new syntax_plugin_bureaucracy();
+        $syntax_plugin = new syntax_plugin_bureaucracyau();
         $data = $syntax_plugin->handle($form_syntax, 0, 0, new Doku_Handler());
 
         $actionData = $data['actions'][0];

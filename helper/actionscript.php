@@ -1,6 +1,6 @@
 <?php
 
-class helper_plugin_bureaucracy_actionscript extends helper_plugin_bureaucracy_action {
+class helper_plugin_bureaucracyau_actionscript extends helper_plugin_bureaucracyau_action {
 
     protected $scriptNamePattern = '/^[_a-zA-Z0-9]+\.php$/';
 
@@ -20,30 +20,30 @@ class helper_plugin_bureaucracy_actionscript extends helper_plugin_bureaucracy_a
             throw new InvalidArgumentException("The supplied scriptname \"<code>$cleanedScriptName</code>\" is invalid! It must conform to <code>{hsc($this->scriptNamePattern)}</code>!");
         }
 
-        $path = DOKU_CONF . 'plugin/bureaucracy/' . $scriptName;
+        $path = DOKU_CONF . 'plugin/bureaucracyau/' . $scriptName;
 
         if (!file_exists($path)) {
-            $shortPath = 'conf/plugin/bureaucracy/' . $scriptName;
+            $shortPath = 'conf/plugin/bureaucracyau/' . $scriptName;
             throw new InvalidArgumentException("Script <code>$shortPath</code> doesn't exist!");
         }
 
         require $path;
 
         $classFragment = substr($scriptName, 0, strpos($scriptName, '.'));
-        $className = 'helper_plugin_bureaucracy_handler_' . $classFragment;
+        $className = 'helper_plugin_bureaucracyau_handler_' . $classFragment;
 
-        $deprecatedClassName = 'bureaucracy_handler_' . $classFragment;
+        $deprecatedClassName = 'bureaucracyau_handler_' . $classFragment;
         if (!class_exists($className) && class_exists($deprecatedClassName)) {
             msg("Please change this script's class-name to <code>$className</code>.
 Your current scheme <code>$deprecatedClassName</code> is deprecated and will stop working in the future.", 2);
             $className = $deprecatedClassName;
         }
 
-        /** @var dokuwiki\plugin\bureaucracy\interfaces\bureaucracy_handler_interface $handler */
+        /** @var dokuwiki\plugin\bureaucracyau\interfaces\bureaucracyau_handler_interface $handler */
         $handler = new $className;
 
-        if (!is_a($handler, dokuwiki\plugin\bureaucracy\interfaces\bureaucracy_handler_interface::class)) {
-            throw new InvalidArgumentException('The handler must implement the interface <code>dokuwiki\\plugin\\bureaucracy\\interfaces\\bureaucracy_handler_interface</code> !');
+        if (!is_a($handler, dokuwiki\plugin\bureaucracyau\interfaces\bureaucracyau_handler_interface::class)) {
+            throw new InvalidArgumentException('The handler must implement the interface <code>dokuwiki\\plugin\\bureaucracyau\\interfaces\\bureaucracyau_handler_interface</code> !');
         }
 
         return $handler->handleData($fields, $thanks);

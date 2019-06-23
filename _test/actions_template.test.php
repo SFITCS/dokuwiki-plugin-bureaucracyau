@@ -1,11 +1,11 @@
 <?php
 /**
- * @group plugin_bureaucracy
+ * @group plugin_bureaucracyau
  * @group plugins
  */
-class syntax_plugin_bureaucracy_action_template_test extends DokuWikiTest {
+class syntax_plugin_bureaucracyau_action_template_test extends DokuWikiTest {
 
-    protected $pluginsEnabled = array('bureaucracy');
+    protected $pluginsEnabled = array('bureaucracyau');
 
     public function testPrepareLanguagePlaceholderNoTranslate() {
         $action = $this->getTemplateClass();
@@ -58,8 +58,8 @@ class syntax_plugin_bureaucracy_action_template_test extends DokuWikiTest {
 
     public function testProcessFields() {
         $data = array();
-        /** @var helper_plugin_bureaucracy_fieldstatic $staticfield */
-        $staticfield = plugin_load('helper', 'bureaucracy_fieldstatic');
+        /** @var helper_plugin_bureaucracyau_fieldstatic $staticfield */
+        $staticfield = plugin_load('helper', 'bureaucracyau_fieldstatic');
         $staticfield->initialize(array('text', 'text1'));
         $data[] = $staticfield;
 
@@ -72,11 +72,11 @@ class syntax_plugin_bureaucracy_action_template_test extends DokuWikiTest {
     }
 
     /**
-     * @return helper_plugin_bureaucracy_actiontemplate
+     * @return helper_plugin_bureaucracyau_actiontemplate
      */
     private function getTemplateClass() {
-        /** @var helper_plugin_bureaucracy_actiontemplate $templateaction */
-        $templateaction = plugin_load('helper', 'bureaucracy_actiontemplate');
+        /** @var helper_plugin_bureaucracyau_actiontemplate $templateaction */
+        $templateaction = plugin_load('helper', 'bureaucracyau_actiontemplate');
         $templateaction->patterns = array();
         $templateaction->values = array();
         $templateaction->targetpages = array();

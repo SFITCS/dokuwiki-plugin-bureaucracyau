@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldtextbox
+ * Class helper_plugin_bureaucracyau_fieldtextbox
  *
  * Creates a single line input field
  */
-class helper_plugin_bureaucracy_fieldtextbox extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldtextbox extends helper_plugin_bureaucracyau_field {
 
     /**
      * Arguments:

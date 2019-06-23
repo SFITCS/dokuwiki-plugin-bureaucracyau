@@ -1,6 +1,6 @@
 <?php
 /**
- * Bureaucracy Plugin: Allows flexible creation of forms
+ * Bureaucracy-AU Plugin: Allows flexible creation of forms
  *
  * This plugin allows definition of forms in wiki pages. The forms can be
  * submitted via email or used to create new pages from templates.
@@ -13,9 +13,9 @@
 if (!defined('DOKU_INC')) die();
 
 /**
- * Class action_plugin_bureaucracy
+ * Class action_plugin_bureaucracyau
  */
-class action_plugin_bureaucracy extends DokuWiki_Action_Plugin {
+class action_plugin_bureaucracyau extends DokuWiki_Action_Plugin {
 
     /**
      * Registers a callback function for a given event
@@ -29,7 +29,7 @@ class action_plugin_bureaucracy extends DokuWiki_Action_Plugin {
      * @param $param
      */
     public function ajax(Doku_Event $event, $param) {
-        if ($event->data !== 'bureaucracy_user_field') {
+        if ($event->data !== 'bureaucracyau_user_field') {
             return;
         }
         $event->stopPropagation();

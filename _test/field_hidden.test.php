@@ -1,14 +1,14 @@
 <?php
 
-namespace dokuwiki\plugin\bureaucracy\test;
+namespace dokuwiki\plugin\bureaucracyau\test;
 
 use \Doku_Form;
 
 /**
- * @group plugin_bureaucracy
+ * @group plugin_bureaucracyau
  * @group plugins
  */
-class bureaucracy_field_hidden_test extends BureaucracyTest
+class bureaucracyau_field_hidden_test extends BureaucracyauTest
 {
 
     public function dataProvider()
@@ -66,9 +66,9 @@ class bureaucracy_field_hidden_test extends BureaucracyTest
 
         $actualHTML = p_render('xhtml', $instr, $info);
 
-        $hiddenFormPrefix = '<form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="" accept-charset="utf-8"><div class="no">
-<input type="hidden" name="sectok" value="" /><input type="hidden" name="bureaucracy[$$id]" value="1" />';
-        $expectedFieldHTML = '<input type="hidden" name="bureaucracy[0]" value="default value of the hidden field" />';
+        $hiddenFormPrefix = '<form class="bureaucracyau__plugin" id="bureaucracyau__plugin1" enctype="multipart/form-data" method="post" action="" accept-charset="utf-8"><div class="no">
+<input type="hidden" name="sectok" value="" /><input type="hidden" name="bureaucracyau[$$id]" value="1" />';
+        $expectedFieldHTML = '<input type="hidden" name="bureaucracyau[0]" value="default value of the hidden field" />';
         $hiddenFormSuffix = '</div></form>';
         $expectedHTML = "$hiddenFormPrefix$expectedFieldHTML$hiddenFormSuffix";
 

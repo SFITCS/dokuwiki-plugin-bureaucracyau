@@ -2,9 +2,9 @@
  * Handle display of dependent, i. e. optional fieldsets
  *
  * Fieldsets may be defined as dependent on the value of a certain input. In
- * this case they contain a p element with the CSS class “bureaucracy_depends”.
- * This p element holds a span with the class “bureaucracy_depends_fname”
- * and optionally another span with “bureaucracy_depends_fvalue”. They
+ * this case they contain a p element with the CSS class “bureaucracyau_depends”.
+ * This p element holds a span with the class “bureaucracyau_depends_fname”
+ * and optionally another span with “bureaucracyau_depends_fvalue”. They
  * specify the target input (fname) and the target value for which the fieldset
  * is to be shown.
  *
@@ -16,7 +16,7 @@
 
 jQuery(function () {
 
-    jQuery('form.bureaucracy__plugin').each(function () {
+    jQuery('form.bureaucracyau__plugin').each(function () {
 
         //show/hide fieldset and trigger depending children
         function updateFieldset(input) {
@@ -49,11 +49,11 @@ jQuery(function () {
         }
 
         //look for p (with info about controller) in depending fieldsets
-        jQuery('p.bureaucracy_depends', this)
+        jQuery('p.bureaucracyau_depends', this)
             .each(function () {
                 //get controller info
-                var fname = jQuery(this).find('span.bureaucracy_depends_fname').html(),
-                    fvalue = jQuery(this).find('span.bureaucracy_depends_fvalue');
+                var fname = jQuery(this).find('span.bureaucracyau_depends_fname').html(),
+                    fvalue = jQuery(this).find('span.bureaucracyau_depends_fvalue');
                 fvalue = (fvalue.length ? fvalue.html() : true);
 
                 //get controller field and add info and change event to the input that controls depending fieldset
@@ -78,7 +78,7 @@ jQuery(function () {
                     .change();
 
             })
-            .hide(); //hide p.bureaucracy_depends in fieldset
+            .hide(); //hide p.bureaucracyau_depends in fieldset
 
     });
 });

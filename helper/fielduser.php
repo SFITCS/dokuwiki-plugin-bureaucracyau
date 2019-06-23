@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fielduser
+ * Class helper_plugin_bureaucracyau_fielduser
  *
  * Create single user input, with autocompletion
  */
-class helper_plugin_bureaucracy_fielduser extends helper_plugin_bureaucracy_fieldtextbox {
+class helper_plugin_bureaucracyau_fielduser extends helper_plugin_bureaucracyau_fieldtextbox {
 
     /**
      * Arguments:

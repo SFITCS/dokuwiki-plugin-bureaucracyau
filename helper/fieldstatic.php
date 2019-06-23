@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldstatic
+ * Class helper_plugin_bureaucracyau_fieldstatic
  *
  * Adds some static text to the form
  */
-class helper_plugin_bureaucracy_fieldstatic extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldstatic extends helper_plugin_bureaucracyau_field {
     protected $tpl = '<p>@@DISPLAY@@</p>';
 
     /**
@@ -24,7 +24,7 @@ class helper_plugin_bureaucracy_fieldstatic extends helper_plugin_bureaucracy_fi
      * Handle a post to the field
      *
      * @param string $value The passed value
-     * @param helper_plugin_bureaucracy_field[] $fields (reference) form fields (POST handled upto $this field)
+     * @param helper_plugin_bureaucracyau_field[] $fields (reference) form fields (POST handled upto $this field)
      * @param int    $index  index number of field in form
      * @param int    $formid unique identifier of the form which contains this field
      * @return bool Whether the passed value is valid

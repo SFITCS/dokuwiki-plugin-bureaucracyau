@@ -1,9 +1,9 @@
 <?php
 /**
- * Action sendemail for DokuWiki plugin bureaucracy
+ * Action sendemail for DokuWiki plugin bureaucracyau
  */
 
-class helper_plugin_bureaucracy_actionmail extends helper_plugin_bureaucracy_action {
+class helper_plugin_bureaucracyau_actionmail extends helper_plugin_bureaucracyau_action {
 
     protected $_mail_html = '';
     protected $_mail_text = '';
@@ -14,7 +14,7 @@ class helper_plugin_bureaucracy_actionmail extends helper_plugin_bureaucracy_act
     /**
      * Build a nice email from the submitted data and send it
      *
-     * @param helper_plugin_bureaucracy_field[] $fields
+     * @param helper_plugin_bureaucracyau_field[] $fields
      * @param string                            $thanks
      * @param array                             $argv
      * @return string thanks message
@@ -86,7 +86,7 @@ class helper_plugin_bureaucracy_actionmail extends helper_plugin_bureaucracy_act
      * Create html and plain table of the field
      * and collect values for subject and replyto
      *
-     * @param helper_plugin_bureaucracy_field[] $fields
+     * @param helper_plugin_bureaucracyau_field[] $fields
      * @param Mailer $mail
      * @return array of html and text table
      */

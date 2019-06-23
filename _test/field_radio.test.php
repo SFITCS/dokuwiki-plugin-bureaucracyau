@@ -1,14 +1,14 @@
 <?php
 
-namespace dokuwiki\plugin\bureaucracy\test;
+namespace dokuwiki\plugin\bureaucracyau\test;
 
 use Doku_Form;
 
 /**
- * @group plugin_bureaucracy
+ * @group plugin_bureaucracyau
  * @group plugins
  */
-class bureaucracy_field_radio_test extends BureaucracyTest
+class bureaucracyau_field_radio_test extends BureaucracyauTest
 {
 
     public function dataProvider()
@@ -65,9 +65,9 @@ class bureaucracy_field_radio_test extends BureaucracyTest
 
         $actualHTML = p_render('xhtml', $instr, $info);
 
-        $expectedFieldHTML = '<label class="radiolabel "><span>radioLabel <sup>*</sup></span></label><label><input type="radio" name="bureaucracy[0]" value="Peaches" /> <span>Peaches</span></label>
-<label><input type="radio" name="bureaucracy[0]" value="Apples" /> <span>Apples</span></label>
-<label><input type="radio" name="bureaucracy[0]" value="Oranges" /> <span>Oranges</span></label>';
+        $expectedFieldHTML = '<label class="radiolabel "><span>radioLabel <sup>*</sup></span></label><label><input type="radio" name="bureaucracyau[0]" value="Peaches" /> <span>Peaches</span></label>
+<label><input type="radio" name="bureaucracyau[0]" value="Apples" /> <span>Apples</span></label>
+<label><input type="radio" name="bureaucracyau[0]" value="Oranges" /> <span>Oranges</span></label>';
         $expectedHTML = self::FORM_PREFIX_HTML . "\n$expectedFieldHTML\n" . self::FORM_SUFFIX_HTML;
         $this->assertEquals(trim($expectedHTML), trim($actualHTML));
     }

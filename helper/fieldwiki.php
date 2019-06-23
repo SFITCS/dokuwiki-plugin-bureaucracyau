@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldwiki
+ * Class helper_plugin_bureaucracyau_fieldwiki
  *
  * Adds some static text to the form, but parses the input as Wiki syntax (computationally expensive)
  */
-class helper_plugin_bureaucracy_fieldwiki extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldwiki extends helper_plugin_bureaucracyau_field {
 
     protected $tpl = '<p>@@LABEL@@</p>';
 
@@ -25,7 +25,7 @@ class helper_plugin_bureaucracy_fieldwiki extends helper_plugin_bureaucracy_fiel
      * Handle a post to the field
      *
      * @param null $value empty
-     * @param helper_plugin_bureaucracy_field[] $fields (reference) form fields (POST handled upto $this field)
+     * @param helper_plugin_bureaucracyau_field[] $fields (reference) form fields (POST handled upto $this field)
      * @param int    $index  index number of field in form
      * @param int    $formid unique identifier of the form which contains this field
      * @return bool Whether the passed value is valid

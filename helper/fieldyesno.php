@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldyesno
+ * Class helper_plugin_bureaucracyau_fieldyesno
  *
  * Creates a checkbox
  */
-class helper_plugin_bureaucracy_fieldyesno extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldyesno extends helper_plugin_bureaucracyau_field {
 
     /**
      * Arguments:
@@ -79,7 +79,7 @@ class helper_plugin_bureaucracy_fieldyesno extends helper_plugin_bureaucracy_fie
      * @params int       $formid unique identifier of the form which contains this field
      */
     public function renderfield($params, Doku_Form $form, $formid) {
-        $id = 'bureaucracy__'.md5(rand());
+        $id = 'bureaucracyau__'.md5(rand());
         if(isset($this->opt['id'])) {
             $id = $this->opt['id'];
         }

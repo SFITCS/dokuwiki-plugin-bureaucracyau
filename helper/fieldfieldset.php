@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldfieldset
+ * Class helper_plugin_bureaucracyau_fieldfieldset
  *
  * Creates a new set of fields, which optional can be shown/hidden depending on the value of another field above it.
  */
-class helper_plugin_bureaucracy_fieldfieldset extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldfieldset extends helper_plugin_bureaucracyau_field {
     protected $mandatory_args = 1;
     /** @var array with zero, one entry (fieldname) or two entries (fieldname and match value) */
     public $depends_on = array();
@@ -43,14 +43,14 @@ class helper_plugin_bureaucracy_fieldfieldset extends helper_plugin_bureaucracy_
             $dependencies = array_map('hsc',(array) $this->depends_on);
             if (count($this->depends_on) > 1) {
                 $msg = 'Only edit this fieldset if ' .
-                       '“<span class="bureaucracy_depends_fname">%s</span>” '.
-                       'is set to “<span class="bureaucracy_depends_fvalue">%s</span>”.';
+                       '“<span class="bureaucracyau_depends_fname">%s</span>” '.
+                       'is set to “<span class="bureaucracyau_depends_fvalue">%s</span>”.';
             } else {
                 $msg = 'Only edit this fieldset if ' .
-                       '“<span class="bureaucracy_depends_fname">%s</span>” is set.';
+                       '“<span class="bureaucracyau_depends_fname">%s</span>” is set.';
             }
 
-            $form->addElement('<p class="bureaucracy_depends">' . vsprintf($msg, $dependencies) . '</p>');
+            $form->addElement('<p class="bureaucracyau_depends">' . vsprintf($msg, $dependencies) . '</p>');
         }
     }
 
@@ -60,7 +60,7 @@ class helper_plugin_bureaucracy_fieldfieldset extends helper_plugin_bureaucracy_
      * When fieldset is closed, set containing fields to hidden
      *
      * @param null $value field value of fieldset always empty
-     * @param helper_plugin_bureaucracy_field[] $fields (reference) form fields (POST handled upto $this field)
+     * @param helper_plugin_bureaucracyau_field[] $fields (reference) form fields (POST handled upto $this field)
      * @param int    $index  index number of field in form
      * @param int    $formid unique identifier of the form which contains this field
      * @return bool Whether the passed value is valid

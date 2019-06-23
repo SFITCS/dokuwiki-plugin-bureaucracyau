@@ -3,7 +3,7 @@
 /**
  * File upload field
  */
-class helper_plugin_bureaucracy_fieldfile extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldfile extends helper_plugin_bureaucracyau_field {
 
     /**
      * Arguments:
@@ -43,7 +43,7 @@ class helper_plugin_bureaucracy_fieldfile extends helper_plugin_bureaucracy_fiel
      * Accepts and validates a posted value.
      *
      * @param array $value The passed value or array or null if none given
-     * @param helper_plugin_bureaucracy_field[] $fields (reference) form fields (POST handled upto $this field)
+     * @param helper_plugin_bureaucracyau_field[] $fields (reference) form fields (POST handled upto $this field)
      * @param int    $index  index number of field in form
      * @param int    $formid unique identifier of the form which contains this field
      * @return bool Whether the passed filename is valid

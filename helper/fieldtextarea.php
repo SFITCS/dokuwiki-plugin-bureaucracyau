@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldtextarea
+ * Class helper_plugin_bureaucracyau_fieldtextarea
  *
  * Creates a multi-line input field
  */
-class helper_plugin_bureaucracy_fieldtextarea extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldtextarea extends helper_plugin_bureaucracyau_field {
     /**
      * Arguments:
      *  - cmd

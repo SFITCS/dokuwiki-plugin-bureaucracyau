@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldtime
+ * Class helper_plugin_bureaucracyau_fieldtime
  *
  * A time in the format (h)h:mm(:ss)
  */
-class helper_plugin_bureaucracy_fieldtime extends helper_plugin_bureaucracy_fieldtextbox {
+class helper_plugin_bureaucracyau_fieldtime extends helper_plugin_bureaucracyau_fieldtextbox {
     /**
      * Arguments:
      *  - cmd

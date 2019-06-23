@@ -1,15 +1,15 @@
 <?php
 /**
- * Base class for bureaucracy actions.
+ * Base class for bureaucracyau actions.
  *
- * All bureaucracy actions have to inherit from this class.
+ * All bureaucracyau actions have to inherit from this class.
  *
  * ATM this class is pretty empty but, in the future it could be used to add
  * helper functions which can be utilized by the different actions.
  *
  * @author Michael Klier <chi@chimeric.de>
  */
-class helper_plugin_bureaucracy_action extends syntax_plugin_bureaucracy {
+class helper_plugin_bureaucracyau_action extends syntax_plugin_bureaucracyau {
 
     /**
      * Return false to prevent DokuWiki reusing instances of the plugin
@@ -24,10 +24,10 @@ class helper_plugin_bureaucracy_action extends syntax_plugin_bureaucracy {
      * Handle the user input [required]
      *
      * This function needs to be implemented to accept the user data collected
-     * from the form. Data has to be grabbed from $_POST['bureaucracy'] using
+     * from the form. Data has to be grabbed from $_POST['bureaucracyau'] using
      * the indicies in the 'idx' members of the $data items.
      *
-     * @param helper_plugin_bureaucracy_field[] $fields the list of fields in the form
+     * @param helper_plugin_bureaucracyau_field[] $fields the list of fields in the form
      * @param string                            $thanks the thank you message as defined in the form
      *                                                  or default one. Might be modified by the action
      *                                                  before returned
@@ -63,7 +63,7 @@ class helper_plugin_bureaucracy_action extends syntax_plugin_bureaucracy {
     /**
      * Adds replacement pattern for fieldlabels (e.g @@Label@@)
      *
-     * @param helper_plugin_bureaucracy_field $field
+     * @param helper_plugin_bureaucracyau_field $field
      */
     function prepareFieldReplacement($field) {
         $label = $field->getParam('label');
@@ -85,7 +85,7 @@ class helper_plugin_bureaucracy_action extends syntax_plugin_bureaucracy {
     /**
      * Generate field replacements
      *
-     * @param helper_plugin_bureaucracy_field[]  $fields  List of field objects
+     * @param helper_plugin_bureaucracyau_field[]  $fields  List of field objects
      * @return array
      */
     function prepareFieldReplacements($fields) {
@@ -124,7 +124,7 @@ class helper_plugin_bureaucracy_action extends syntax_plugin_bureaucracy {
             'name' => 'run',
             'desc' => 'Handle the user input',
             'params' => array(
-                'fields' => 'helper_plugin_bureaucracy_field[]',
+                'fields' => 'helper_plugin_bureaucracyau_field[]',
                 'thanks' => 'string',
                 'argv'   => 'array'
             ),

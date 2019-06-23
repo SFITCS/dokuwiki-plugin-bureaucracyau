@@ -1,12 +1,12 @@
 <?php
 
-namespace dokuwiki\plugin\bureaucracy\test;
+namespace dokuwiki\plugin\bureaucracyau\test;
 
 /**
- * @group plugin_bureaucracy
+ * @group plugin_bureaucracyau
  * @group plugins
  */
-class bureaucracy_field_time_test extends BureaucracyTest
+class bureaucracyau_field_time_test extends BureaucracyauTest
 {
 
     public function dataProvider()
@@ -79,7 +79,7 @@ class bureaucracy_field_time_test extends BureaucracyTest
 
         $actualHTML = p_render('xhtml', $instr, $info);
 
-        $expectedFieldHTML = '<label><span>timeLabel <sup>*</sup></span> <input type="text" name="bureaucracy[0]" class="timefield edit required" maxlength="8" required="required" /></label>';
+        $expectedFieldHTML = '<label><span>timeLabel <sup>*</sup></span> <input type="text" name="bureaucracyau[0]" class="timefield edit required" maxlength="8" required="required" /></label>';
         $expectedHTML = self::FORM_PREFIX_HTML . "\n$expectedFieldHTML\n" . self::FORM_SUFFIX_HTML;
         $this->assertEquals(trim($expectedHTML), trim($actualHTML));
     }

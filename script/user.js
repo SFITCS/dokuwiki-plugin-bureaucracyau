@@ -15,7 +15,7 @@ jQuery(function () {
     function ajaxsource(request, response, getterm) {
         jQuery.getJSON(
             DOKU_BASE + 'lib/exe/ajax.php', {
-                call: 'bureaucracy_user_field',
+                call: 'bureaucracyau_user_field',
                 search: getterm(request)
             }, function (data) {
                 response(jQuery.map(data, function (name, user) {

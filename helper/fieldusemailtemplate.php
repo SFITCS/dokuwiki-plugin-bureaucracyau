@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldusemailtemplate
+ * Class helper_plugin_bureaucracyau_fieldusemailtemplate
  *
  * Adds a template only for use with the mail action
  */
-class helper_plugin_bureaucracy_fieldusemailtemplate extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldusemailtemplate extends helper_plugin_bureaucracyau_field {
 
     /**
      * Arguments:
@@ -38,7 +38,7 @@ class helper_plugin_bureaucracy_fieldusemailtemplate extends helper_plugin_burea
      * Handle a post to the field
      *
      * @param string $value null
-     * @param helper_plugin_bureaucracy_field[] $fields (reference) form fields (POST handled upto $this field)
+     * @param helper_plugin_bureaucracyau_field[] $fields (reference) form fields (POST handled upto $this field)
      * @param int    $index  index number of field in form
      * @param int    $formid unique identifier of the form which contains this field
      * @return bool Whether the passed value is valid

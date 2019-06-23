@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldnumber
+ * Class helper_plugin_bureaucracyau_fieldnumber
  *
  * Creates a single line input field, where input is validated to be numeric
  */
-class helper_plugin_bureaucracy_fieldnumber extends helper_plugin_bureaucracy_fieldtextbox {
+class helper_plugin_bureaucracyau_fieldnumber extends helper_plugin_bureaucracyau_fieldtextbox {
 
     private $autoinc = false;
 
@@ -30,12 +30,12 @@ class helper_plugin_bureaucracy_fieldnumber extends helper_plugin_bureaucracy_fi
         if ($this->autoinc) {
             global $ID;
             $key = $this->get_key();
-            $c_val = p_get_metadata($ID, 'bureaucracy ' . $key);
+            $c_val = p_get_metadata($ID, 'bureaucracyau ' . $key);
             if (is_null($c_val)) {
                 if (!isset($this->opt['value'])) {
                     $this->opt['value'] = 0;
                 }
-                p_set_metadata($ID, array('bureaucracy' => array($key => $this->opt['value'])));
+                p_set_metadata($ID, array('bureaucracyau' => array($key => $this->opt['value'])));
             } else {
                 $this->opt['value'] = $c_val;
             }
@@ -91,7 +91,7 @@ class helper_plugin_bureaucracy_fieldnumber extends helper_plugin_bureaucracy_fi
     public function after_action() {
         if ($this->autoinc) {
             global $ID;
-            p_set_metadata($ID, array('bureaucracy' => array($this->get_key() => $this->opt['value'] + 1)));
+            p_set_metadata($ID, array('bureaucracyau' => array($this->get_key() => $this->opt['value'] + 1)));
             // Force rerendering by removing the instructions cache file
             $cache_fn = getCacheName(wikiFN($ID).$_SERVER['HTTP_HOST'].$_SERVER['SERVER_PORT'],'.'.'i');
             if (file_exists($cache_fn)) {

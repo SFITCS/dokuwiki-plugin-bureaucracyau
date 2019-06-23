@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldhiddenautoinc
+ * Class helper_plugin_bureaucracyau_fieldhiddenautoinc
  *
  * Creates an invisible field with a number that increases by 1 on each form submit
  */
-class helper_plugin_bureaucracy_fieldhiddenautoinc extends helper_plugin_bureaucracy_fieldnumber {
+class helper_plugin_bureaucracyau_fieldhiddenautoinc extends helper_plugin_bureaucracyau_fieldnumber {
 
     /**
      * Arguments:

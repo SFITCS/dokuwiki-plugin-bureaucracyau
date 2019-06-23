@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldselect
+ * Class helper_plugin_bureaucracyau_fieldselect
  *
  * Creates a dropdown list
  */
-class helper_plugin_bureaucracy_fieldselect extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldselect extends helper_plugin_bureaucracyau_field {
 
     protected $mandatory_args = 3;
 
@@ -42,7 +42,7 @@ class helper_plugin_bureaucracy_fieldselect extends helper_plugin_bureaucracy_fi
             $form->startFieldset('');
         }
         if ($this->error) {
-            $params['class'] = 'bureaucracy_error';
+            $params['class'] = 'bureaucracyau_error';
         }
         $params = array_merge($this->opt, $params);
         $form->addElement(call_user_func_array('form_makeListboxField',

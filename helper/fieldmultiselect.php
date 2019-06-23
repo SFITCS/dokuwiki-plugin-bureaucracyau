@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldmultiselect
+ * Class helper_plugin_bureaucracyau_fieldmultiselect
  *
  * Creates a multiselect box
  */
-class helper_plugin_bureaucracy_fieldmultiselect extends helper_plugin_bureaucracy_fieldselect {
+class helper_plugin_bureaucracyau_fieldmultiselect extends helper_plugin_bureaucracyau_fieldselect {
 
     /**
      * Arguments:
@@ -42,7 +42,7 @@ class helper_plugin_bureaucracy_fieldmultiselect extends helper_plugin_bureaucra
             $form->startFieldset('');
         }
         if ($this->error) {
-            $params['class'] = 'bureaucracy_error';
+            $params['class'] = 'bureaucracyau_error';
         }
         $params = array_merge($this->opt, $params);
         $form->addElement(call_user_func_array('form_makeListboxField',

@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldhidden
+ * Class helper_plugin_bureaucracyau_fieldhidden
  *
  * Creates an invisible field with static data
  */
-class helper_plugin_bureaucracy_fieldhidden extends helper_plugin_bureaucracy_field {
+class helper_plugin_bureaucracyau_fieldhidden extends helper_plugin_bureaucracyau_field {
 
     /**
      * Arguments:

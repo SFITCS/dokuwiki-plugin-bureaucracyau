@@ -10,11 +10,11 @@
  **/
 
 /**
- * Class helper_plugin_bureaucracy_field
+ * Class helper_plugin_bureaucracyau_field
  *
  * base class for all the form fields
  */
-class helper_plugin_bureaucracy_field extends syntax_plugin_bureaucracy {
+class helper_plugin_bureaucracyau_field extends syntax_plugin_bureaucracyau {
 
     protected $mandatory_args = 2;
     public $opt = array();
@@ -30,9 +30,9 @@ class helper_plugin_bureaucracy_field extends syntax_plugin_bureaucracy {
     );
 
     /**
-     * Construct a helper_plugin_bureaucracy_field object
+     * Construct a helper_plugin_bureaucracyau_field object
      *
-     * This constructor initializes a helper_plugin_bureaucracy_field object
+     * This constructor initializes a helper_plugin_bureaucracyau_field object
      * based on a given definition.
      *
      * The first two items represent:
@@ -98,7 +98,7 @@ class helper_plugin_bureaucracy_field extends syntax_plugin_bureaucracy {
                 $this->opt['optional'] = true;
             } elseif ($arg == '^') {
                 //only one field has focus
-                if (helper_plugin_bureaucracy_field::hasFocus()) {
+                if (helper_plugin_bureaucracyau_field::hasFocus()) {
                     $this->opt['id'] = 'focus__this';
                 }
             } elseif($arg == '@') {
@@ -152,7 +152,7 @@ class helper_plugin_bureaucracy_field extends syntax_plugin_bureaucracy {
             $form->startFieldset('');
         }
         if ($this->error) {
-            $params['class'] = 'bureaucracy_error';
+            $params['class'] = 'bureaucracyau_error';
         }
 
         $params = array_merge($this->opt, $params);
@@ -193,7 +193,7 @@ class helper_plugin_bureaucracy_field extends syntax_plugin_bureaucracy {
      * (Overridden by fieldset, which has as argument an array with the form array by reference)
      *
      * @param string $value  The passed value or array or null if none given
-     * @param helper_plugin_bureaucracy_field[] $fields (reference) form fields (POST handled upto $this field)
+     * @param helper_plugin_bureaucracyau_field[] $fields (reference) form fields (POST handled upto $this field)
      * @param int    $index  index number of field in form
      * @param int    $formid unique identifier of the form which contains this field
      * @return bool Whether the passed value is valid
@@ -474,7 +474,7 @@ class helper_plugin_bureaucracy_field extends syntax_plugin_bureaucracy {
             'desc' => 'Handle a post to the field',
             'params' => array(
                 'value' => 'array',
-                'fields' => 'helper_plugin_bureaucracy_field[]',
+                'fields' => 'helper_plugin_bureaucracyau_field[]',
                 'index' => 'Doku_Form',
                 'formid' => 'integer'
             ),

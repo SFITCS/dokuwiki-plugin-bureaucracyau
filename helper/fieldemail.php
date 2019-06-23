@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldemail
+ * Class helper_plugin_bureaucracyau_fieldemail
  *
  * Creates a single line input field where the input is validated to be a valid email address
  */
-class helper_plugin_bureaucracy_fieldemail extends helper_plugin_bureaucracy_fieldtextbox {
+class helper_plugin_bureaucracyau_fieldemail extends helper_plugin_bureaucracyau_fieldtextbox {
 
     /**
      * Arguments:

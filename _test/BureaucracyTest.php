@@ -1,22 +1,22 @@
 <?php
 
-namespace dokuwiki\plugin\bureaucracy\test;
+namespace dokuwiki\plugin\bureaucracyau\test;
 
 
-class BureaucracyTest extends \DokuWikiTest
+class BureaucracyauTest extends \DokuWikiTest
 {
 
-    const FORM_PREFIX_HTML = '<form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="" accept-charset="utf-8"><div class="no">
-<input type="hidden" name="sectok" value="" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend></legend>';
+    const FORM_PREFIX_HTML = '<form class="bureaucracyau__plugin" id="bureaucracyau__plugin1" enctype="multipart/form-data" method="post" action="" accept-charset="utf-8"><div class="no">
+<input type="hidden" name="sectok" value="" /><input type="hidden" name="bureaucracyau[$$id]" value="1" /><fieldset ><legend></legend>';
     const FORM_SUFFIX_HTML = '</fieldset>
 </div></form>';
 
-    protected $pluginsEnabled = ['bureaucracy'];
+    protected $pluginsEnabled = ['bureaucracyau'];
 
     /**
-     * Simulate sending of bureaucracy form
+     * Simulate sending of bureaucracyau form
      *
-     * @param string|array $form_syntax         syntax to build a bureaucracy form
+     * @param string|array $form_syntax         syntax to build a bureaucracyau form
      * @param string       $template_syntax     syntax used as a page template for the "action template"
      * @param array        & $validation_errors field labels that were invalid
      * @param string|array ...$values           values passed to form handler
@@ -36,17 +36,17 @@ class BureaucracyTest extends \DokuWikiTest
 
         saveWikiText($template_id, $template_syntax, 'summary');
 
-        /** @var \syntax_plugin_bureaucracy $syntax_plugin */
-        $syntax_plugin = plugin_load('syntax', 'bureaucracy');
+        /** @var \syntax_plugin_bureaucracyau $syntax_plugin */
+        $syntax_plugin = plugin_load('syntax', 'bureaucracyau');
         $data = $syntax_plugin->handle($form_syntax, 0, 0, new \Doku_Handler());
 
         $actionData = $data['actions'][0];
-        /** @var \helper_plugin_bureaucracy_action $action */
+        /** @var \helper_plugin_bureaucracyau_action $action */
         $action = plugin_load('helper', $actionData['actionname']);
         //this is the only form
         $form_id = 0;
 
-        /** @var \helper_plugin_bureaucracy_field $field */
+        /** @var \helper_plugin_bureaucracyau_field $field */
         foreach ($data['fields'] as $i => $field) {
             if (!isset($values[$i])) {
                 $values[$i] = null;

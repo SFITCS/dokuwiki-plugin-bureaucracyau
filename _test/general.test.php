@@ -1,11 +1,11 @@
 <?php
 /**
- * General tests for the bureaucracy plugin
+ * General tests for the bureaucracyau plugin
  *
- * @group plugin_bureaucracy
+ * @group plugin_bureaucracyau
  * @group plugins
  */
-class general_plugin_bureaucracy_test extends DokuWikiTest {
+class general_plugin_bureaucracyau_test extends DokuWikiTest {
 
     /**
      * Simple test to make sure the plugin.info.txt is in correct format
@@ -24,7 +24,7 @@ class general_plugin_bureaucracy_test extends DokuWikiTest {
         $this->assertArrayHasKey('desc', $info);
         $this->assertArrayHasKey('url', $info);
 
-        $this->assertEquals('bureaucracy', $info['base']);
+        $this->assertEquals('bureaucracyau', $info['base']);
         $this->assertRegExp('/^https?:\/\//', $info['url']);
         $this->assertTrue(mail_isvalid($info['email']));
         $this->assertRegExp('/^\d\d\d\d-\d\d-\d\d$/', $info['date']);
@@ -45,15 +45,15 @@ class general_plugin_bureaucracy_test extends DokuWikiTest {
             include($meta_file);
         }
 
-        $this->assertEquals(gettype($conf), gettype($meta),'Both ' . DOKU_PLUGIN . 'bureaucracy/conf/default.php and ' . DOKU_PLUGIN . 'bureaucracy/conf/metadata.php have to exist and contain the same keys.');
+        $this->assertEquals(gettype($conf), gettype($meta),'Both ' . DOKU_PLUGIN . 'bureaucracyau/conf/default.php and ' . DOKU_PLUGIN . 'bureaucracyau/conf/metadata.php have to exist and contain the same keys.');
 
         if (gettype($conf) != 'NULL' && gettype($meta) != 'NULL') {
             foreach($conf as $key => $value) {
-                $this->assertArrayHasKey($key, $meta, 'Key $meta[\'' . $key . '\'] missing in ' . DOKU_PLUGIN . 'bureaucracy/conf/metadata.php');
+                $this->assertArrayHasKey($key, $meta, 'Key $meta[\'' . $key . '\'] missing in ' . DOKU_PLUGIN . 'bureaucracyau/conf/metadata.php');
             }
 
             foreach($meta as $key => $value) {
-                $this->assertArrayHasKey($key, $conf, 'Key $conf[\'' . $key . '\'] missing in ' . DOKU_PLUGIN . 'bureaucracy/conf/default.php');
+                $this->assertArrayHasKey($key, $conf, 'Key $conf[\'' . $key . '\'] missing in ' . DOKU_PLUGIN . 'bureaucracyau/conf/default.php');
             }
         }
 

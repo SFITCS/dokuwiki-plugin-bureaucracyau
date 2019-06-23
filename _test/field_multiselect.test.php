@@ -1,14 +1,14 @@
 <?php
 
-namespace dokuwiki\plugin\bureaucracy\test;
+namespace dokuwiki\plugin\bureaucracyau\test;
 
 use Doku_Form;
 
 /**
- * @group plugin_bureaucracy
+ * @group plugin_bureaucracyau
  * @group plugins
  */
-class bureaucracy_field_multiselect_test extends BureaucracyTest
+class bureaucracyau_field_multiselect_test extends BureaucracyauTest
 {
 
     public function dataProvider()
@@ -72,7 +72,7 @@ class bureaucracy_field_multiselect_test extends BureaucracyTest
 
         $actualHTML = p_render('xhtml', $instr, $info);
 
-        $expectedFieldHTML = '<label><span>multiSelectLabel <sup>*</sup></span> <select name="bureaucracy[0][]" multiple="multiple">
+        $expectedFieldHTML = '<label><span>multiSelectLabel <sup>*</sup></span> <select name="bureaucracyau[0][]" multiple="multiple">
 <option value="Peaches" selected="selected">Peaches</option><option value="Apples">Apples</option><option value="Oranges" selected="selected">Oranges</option>
 </select></label>';
         $expectedHTML = self::FORM_PREFIX_HTML . "\n$expectedFieldHTML\n" . self::FORM_SUFFIX_HTML;

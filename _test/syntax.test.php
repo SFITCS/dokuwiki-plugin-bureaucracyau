@@ -1,11 +1,11 @@
 <?php
 /**
- * @group plugin_bureaucracy
+ * @group plugin_bureaucracyau
  * @group plugins
  */
-class syntax_plugin_bureaucracy_test extends DokuWikiTest {
+class syntax_plugin_bureaucracyau_test extends DokuWikiTest {
 
-    protected $pluginsEnabled = array('bureaucracy');
+    protected $pluginsEnabled = array('bureaucracyau');
 
     public function test_generalFormOutput() {
         $input = file_get_contents(dirname(__FILE__) . '/input.txt');
@@ -13,8 +13,8 @@ class syntax_plugin_bureaucracy_test extends DokuWikiTest {
 
         $doc = phpQuery::newDocument($xhtml);
 
-        $this->assertEquals(1, pq('form.bureaucracy__plugin', $doc)->length);
-        $this->assertEquals(6, pq('form.bureaucracy__plugin fieldset', $doc)->length);
+        $this->assertEquals(1, pq('form.bureaucracyau__plugin', $doc)->length);
+        $this->assertEquals(6, pq('form.bureaucracyau__plugin fieldset', $doc)->length);
 
         // standard input types
         $this->checkField($doc, 'Employee Name', 'input[type=text][value=Your Name].edit', true);
@@ -59,7 +59,7 @@ class syntax_plugin_bureaucracy_test extends DokuWikiTest {
 
     private function checkField($doc, $name, $check, $required=false) {
 
-        $field = pq('form.bureaucracy__plugin label span:contains(' . $name . ')', $doc);
+        $field = pq('form.bureaucracyau__plugin label span:contains(' . $name . ')', $doc);
         $this->assertEquals(1, $field->length, "find span of $name");
 
         if($required){
@@ -111,7 +111,7 @@ textbox Label8';
         while(count($lines) > 0) {
             $line = trim(array_shift($lines));
 
-            $syntaxcomponent = new syntax_plugin_bureaucracy();
+            $syntaxcomponent = new syntax_plugin_bureaucracyau();
             $actual = $this->callNonaccessibleMethod($syntaxcomponent, '_parse_line', array($line, &$lines));
 
             $this->assertEquals($expected[$i], $actual);

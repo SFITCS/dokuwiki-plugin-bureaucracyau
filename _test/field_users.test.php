@@ -1,12 +1,12 @@
 <?php
 
-namespace dokuwiki\plugin\bureaucracy\test;
+namespace dokuwiki\plugin\bureaucracyau\test;
 
 /**
- * @group plugin_bureaucracy
+ * @group plugin_bureaucracyau
  * @group plugins
  */
-class syntax_plugin_bureaucracy_fieldusers_test extends BureaucracyTest
+class syntax_plugin_bureaucracyau_fieldusers_test extends BureaucracyauTest
 {
 
     /**

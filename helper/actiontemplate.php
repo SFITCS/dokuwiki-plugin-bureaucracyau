@@ -1,11 +1,11 @@
 <?php
 /**
- * Simple template replacement action for the bureaucracy plugin
+ * Simple template replacement action for the bureaucracyau plugin
  *
  * @author Michael Klier <chi@chimeric.de>
  */
 
-class helper_plugin_bureaucracy_actiontemplate extends helper_plugin_bureaucracy_action {
+class helper_plugin_bureaucracyau_actiontemplate extends helper_plugin_bureaucracyau_action {
 
     var $targetpages;
     var $pagename;
@@ -13,7 +13,7 @@ class helper_plugin_bureaucracy_actiontemplate extends helper_plugin_bureaucracy
     /**
      * Performs template action
      *
-     * @param helper_plugin_bureaucracy_field[] $fields  array with form fields
+     * @param helper_plugin_bureaucracyau_field[] $fields  array with form fields
      * @param string $thanks  thanks message
      * @param array  $argv    array with entries: template, pagename, separator
      * @return array|mixed
@@ -60,7 +60,7 @@ class helper_plugin_bureaucracy_actiontemplate extends helper_plugin_bureaucracy
     /**
      * Prepare and resolve target page
      *
-     * @param helper_plugin_bureaucracy_field[]  $fields  List of field objects
+     * @param helper_plugin_bureaucracyau_field[]  $fields  List of field objects
      * @param string                             $sep     Separator between fields for page id
      * @throws Exception missing pagename
      */
@@ -88,7 +88,7 @@ class helper_plugin_bureaucracy_actiontemplate extends helper_plugin_bureaucracy
     /**
      * Handle templates from addpage field
      *
-     * @param helper_plugin_bureaucracy_field[]  $fields  List of field objects
+     * @param helper_plugin_bureaucracyau_field[]  $fields  List of field objects
      * @return array
      */
     function getAdditionalTargetpages($fields) {
@@ -232,7 +232,7 @@ class helper_plugin_bureaucracy_actiontemplate extends helper_plugin_bureaucracy
                 'fields' => $fields
             );
 
-            $event = new Doku_Event('PLUGIN_BUREAUCRACY_TEMPLATE_SAVE', $evdata);
+            $event = new Doku_Event('PLUGIN_BUREAUCRACYAU_TEMPLATE_SAVE', $evdata);
             if($event->advise_before()) {
                 // save page
                 saveWikiText(
@@ -316,7 +316,7 @@ class helper_plugin_bureaucracy_actiontemplate extends helper_plugin_bureaucracy
         $html .= '<div class="no">';
         ob_start();
         foreach ($pages as $ID) {
-            // indexerWebBug uses ID and INFO[exists], but the bureaucracy form
+            // indexerWebBug uses ID and INFO[exists], but the bureaucracyau form
             // page always exists, as does the just-saved page, so INFO[exists]
             // is correct in any case
             tpl_indexerWebBug();
@@ -337,7 +337,7 @@ class helper_plugin_bureaucracy_actiontemplate extends helper_plugin_bureaucracy
      * move the uploaded files to <pagename>:FILENAME
      *
      *
-     * @param helper_plugin_bureaucracy_field[] $fields
+     * @param helper_plugin_bureaucracyau_field[] $fields
      * @throws Exception
      */
     protected function processUploads($fields) {

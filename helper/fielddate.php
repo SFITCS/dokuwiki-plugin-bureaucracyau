@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fielddate
+ * Class helper_plugin_bureaucracyau_fielddate
  *
- * A date in the format YYYY-MM-DD, provides a date picker
+ * A date in the format DD-MM-YYYY, provides a date picker
  */
-class helper_plugin_bureaucracy_fielddate extends helper_plugin_bureaucracy_fieldtextbox {
+class helper_plugin_bureaucracyau_fielddate extends helper_plugin_bureaucracyau_fieldtextbox {
     /**
      * Arguments:
      *  - cmd
@@ -35,7 +35,7 @@ class helper_plugin_bureaucracy_fielddate extends helper_plugin_bureaucracy_fiel
         parent::_validate();
 
         $value = $this->getParam('value');
-        if (!is_null($value) && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $value)) {
+        if (!is_null($value) && !preg_match('/^\d{2}-\d{2}-\d{4}$/', $value)) {
             throw new Exception(sprintf($this->getLang('e_date'),hsc($this->getParam('display'))));
         }
     }

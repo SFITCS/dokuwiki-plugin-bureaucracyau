@@ -1,10 +1,10 @@
 <?php
 /**
- * Class helper_plugin_bureaucracy_fieldonoff
+ * Class helper_plugin_bureaucracyau_fieldonoff
  *
  * Creates a checkbox
  */
-class helper_plugin_bureaucracy_fieldonoff extends helper_plugin_bureaucracy_fieldyesno {
+class helper_plugin_bureaucracyau_fieldonoff extends helper_plugin_bureaucracyau_fieldyesno {
     /**
      * Arguments:
      *  - cmd

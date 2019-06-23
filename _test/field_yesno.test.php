@@ -1,12 +1,12 @@
 <?php
 
-namespace dokuwiki\plugin\bureaucracy\test;
+namespace dokuwiki\plugin\bureaucracyau\test;
 
 /**
- * @group plugin_bureaucracy
+ * @group plugin_bureaucracyau
  * @group plugins
  */
-class bureaucracy_field_yesno_test extends BureaucracyTest
+class bureaucracyau_field_yesno_test extends BureaucracyauTest
 {
 
     public function dataProvider()
